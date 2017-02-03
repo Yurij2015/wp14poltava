@@ -9,17 +9,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 
-#denied access to wp-config.php
-<Files wp-config.php>
-  deny from all
-</Files>
-
-#denies all web access to wp-config file, error_logs, php.ini, and htaccess/htpasswds
-#------------------------------------------------------------------------------------------
-#<FilesMatch "^.*(error_log|wp-config\.php|php.ini|\.[hH][tT][aApP].*)$">
-#Order deny,allow
-#Deny from all
-#</FilesMatch>
-
-
 # END WordPress

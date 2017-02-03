@@ -1,0 +1,3 @@
+[03-Feb-2017 06:52:10 UTC] PHP Warning:  mysqli_real_connect(): (HY000/1045): Access denied for user 'wp14poltava'@'93.78.197.197' (using password: YES) in D:\OpenServer\domains\wp14poltava\wp-includes\wp-db.php on line 1538
+[03-Feb-2017 06:52:10 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in D:\OpenServer\domains\wp14poltava\wp-includes\wp-db.php on line 1568
+[03-Feb-2017 06:52:10 UTC] PHP Warning:  mysql_connect(): Access denied for user 'wp14poltava'@'93.78.197.197' (using password: YES) in D:\OpenServer\domains\wp14poltava\wp-includes\wp-db.php on line 1568

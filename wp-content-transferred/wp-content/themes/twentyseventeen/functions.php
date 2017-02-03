@@ -564,3 +564,10 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+add_filter('the_content', 'my_action_function');
+// создадим функцию для события
+function my_action_function( $content ){
+	return $content.'Hello!';
+}
