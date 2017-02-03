@@ -12,7 +12,8 @@ class ShParserAutoload
 
     public static function getInstance()
     {
-        if (null == self::$instance) {
+        if (null == self::$instance)
+        {
             self::$instance = new self;
         }
         return self::$instance;
@@ -26,7 +27,8 @@ class ShParserAutoload
     {
         $fileClass = SHPARSER_PLUGIN_DIR . '/' . str_replace("\\", "/", $className) . '.php';
         if (file_exists($fileClass)) {
-            if (!class_exists($fileClass, FALSE)) {
+            if (!class_exists($fileClass, FALSE))
+            {
                 require_once $fileClass;
             }
         }
