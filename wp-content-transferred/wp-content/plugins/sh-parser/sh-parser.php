@@ -1,5 +1,6 @@
 <?php
-/* Plagin Name: Sh-parser
+/*
+Plagin Name: Sh-parser
 Plugin URI: https://github.com/Yurij2015/myplagin.git
 Description: Parser of sites
 Version: 1.0
@@ -24,9 +25,9 @@ Copyright 2017  Yurij Mokrij  (email: nabor_2008@i.ua)
  */
 
 require_once plugin_dir_path(__FILE__) . '/config-path.php';
-require_once SHPARSER_PLUGIN_DIR.'/includes/common/ShParserAutoload.php';
-require_once SHPARSER_PLUGIN_DIR.'/includes/ShParser.php';
+require_once SHPARSER_PLUGIN_DIR . '/includes/common/ShParserAutoload.php';
+require_once SHPARSER_PLUGIN_DIR . '/includes/ShParser.php';
 
-register_activation_hook(__FILE__, array('includes\ShParserPlugin' , 'activation'));
-register_deactivation_hook(__FILE__, array('includes\ShParserPlugin' , 'deactivation'));
+register_activation_hook(__FILE__, array('includes\ShParserPlugin', 'activation'));
+register_deactivation_hook(__FILE__, array('includes\ShParserPlugin', 'deactivation'));
 
