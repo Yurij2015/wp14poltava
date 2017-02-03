@@ -25,7 +25,7 @@ class ShParserAutoload
 
     public function autoloadNamespace($className)
     {
-        $fileClass = SHPARSER_PLUGIN_DIR . '/' . str_replace("\\", "/", $className) . '.php';
+        $fileClass = SHPARSER_PLUGIN_DIR.'/'.str_replace("\\","/", $className).'.php';
         if (file_exists($fileClass)) {
             if (!class_exists($fileClass, FALSE))
             {
