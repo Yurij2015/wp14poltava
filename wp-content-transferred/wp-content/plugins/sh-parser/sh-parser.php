@@ -33,5 +33,4 @@ require_once SHPARSER_PLUGIN_DIR . 'includes/ShParserPlugin.php';
 
 register_activation_hook(__FILE__, array('includes\ShParserPlugin', 'activation'));
 register_deactivation_hook(__FILE__, array('includes\ShParserPlugin', 'deactivation'));
-error_log(SHPARSER_PLUGIN_TEXTDOMAIN);
 
