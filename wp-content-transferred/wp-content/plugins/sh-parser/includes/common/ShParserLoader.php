@@ -70,13 +70,13 @@ class ShParserLoader
     public function all()
     {
         ShParserLocalization::getInstance();
-        //$stepByStepExampleAction = StepByStepExampleAction::newInstance();
-        /*$stepByStepExampleFilter = StepByStepExampleFilter::newInstance();
-       $stepByStepExampleFilter->callMyFilter("Roman");
-       $stepByStepExampleFilter->callMyFilterAdditionalParameter("Roman", "Softgroup", "Poltava");
-       $stepByStepExampleAction = StepByStepExampleAction::newInstance();
-       $stepByStepExampleAction->callMyAction();
-       $stepByStepExampleAction->callMyActionAdditionalParameter( 'test1', 'test2', 'test3' );*/
+        $shParserExampleAction = ShParserExampleAction::newInstance();
+        $shParserExampleFilter = ShParserExampleFilter::newInstance();
+        $shParserExampleFilter->callMyFilter("Yurij");
+        $shParserExampleFilter->callMyFilterAdditionalParameter("Yurij", "Softgroup", "Poltava");
+        $shParserExampleAction = ShParserExampleAction::newInstance();
+        $shParserExampleAction->callMyAction();
+        $shParserExampleAction->callMyActionAdditionalParameter('test1', 'test2', 'test3');
     }
 
 }
