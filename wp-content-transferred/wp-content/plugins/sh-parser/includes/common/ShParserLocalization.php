@@ -30,6 +30,6 @@ class ShParserLocalization
          *                    Этот аргумент следует использовать вместо $abs_rel_path.
          *                   (константа STEPBYSTEP_PlUGIN_DIR_LOCALIZATION заданая в файле config-path.php)
          */
-        load_plugin_textdomain(SHPARSER_PlUGIN_TEXTDOMAIN, false, SHPARSER_PlUGIN_DIR_LOCALIZATION);
+        load_plugin_textdomain(SHPARSER_PLUGIN_TEXTDOMAIN, false, SHPARSER_DIR_LOCALIZATION);
     }
 }

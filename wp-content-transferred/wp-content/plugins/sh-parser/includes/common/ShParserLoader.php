@@ -1,18 +1,7 @@
 <?php
+
 namespace includes\common;
 
-use includes\controllers\admin\menu\ShParserMainAdminMenuController;
-use includes\controllers\admin\menu\ShParserMainAdminSubMenuController;
-use includes\controllers\admin\menu\ShParserMyCommentsMenuController;
-use includes\controllers\admin\menu\ShParserMyDashboardMenuController;
-use includes\controllers\admin\menu\ShParserMyMediaMenuController;
-use includes\controllers\admin\menu\ShParserMyOptionsMenuController;
-use includes\controllers\admin\menu\ShParserMyPagesMenuController;
-use includes\controllers\admin\menu\ShParserMyPluginsMenuController;
-use includes\controllers\admin\menu\ShParserMyPostsMenuController;
-use includes\controllers\admin\menu\ShParserMyThemeMenuController;
-use includes\controllers\admin\menu\ShParserMyToolsMenuController;
-use includes\controllers\admin\menu\ShParserMyUsersMenuController;
 use includes\example\ShParserExampleAction;
 use includes\example\ShParserExampleFilter;
 
@@ -22,7 +11,6 @@ class ShParserLoader
 
     private function __construct()
     {
-
         if (is_admin()) {
             $this->admin();
         } else {
@@ -39,47 +27,19 @@ class ShParserLoader
         return self::$instance;
     }
 
-
     public function admin()
     {
-        ShParserMainAdminMenuController::newInstance();
-        ShParserMainAdminSubMenuController::newInstance();
-        ShParserMyDashboardMenuController::newInstance();
-        ShParserMyPostsMenuController::newInstance();
-        ShParserMyMediaMenuController::newInstance();
-        ShParserMyPagesMenuController::newInstance();
-        ShParserMyCommentsMenuController::newInstance();
-        ShParserMyThemeMenuController::newInstance();
-        ShParserMyPluginsMenuController::newInstance();
-        ShParserMyUsersMenuController::newInstance();
-        ShParserMyToolsMenuController::newInstance();
-        ShParserMyOptionsMenuController::newInstance();
+
     }
 
-    /**
-     * Метод будет срабатывать когда вы находитесь Сайте. Загрузка классов для Сайта
-     */
     public function site()
     {
 
     }
 
-    /**
-     * Метод будет срабатывать везде. Загрузка классов для Админ панеле и Сайта
-     */
     public function all()
     {
         ShParserLocalization::getInstance();
-//        $shParserExampleAction = ShParserExampleAction::newInstance();
-//        $shParserExampleFilter = ShParserExampleFilter::newInstance();
-//        $shParserExampleFilter->callMyFilter("Yurij");
-//        $shParserExampleFilter->callMyFilterAdditionalParameter("Yurij", "Softgroup", "Poltava");
-//        $shParserExampleAction = ShParserExampleAction::newInstance();
-//        $shParserExampleAction->callMyAction();
-//        $shParserExampleAction->callMyActionAdditionalParameter('test1', 'test2', 'test3');
     }
+
 }
-
-
-
-
