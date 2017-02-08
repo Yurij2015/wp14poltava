@@ -3,6 +3,8 @@
 namespace includes;
 
 use includes\common\ShParserLoader;
+use includes\example\ShParserExampleFilter;
+use includes\example\ShParserExampleAction;
 
 class ShParserPlugin
 {
@@ -10,8 +12,13 @@ class ShParserPlugin
 
     private function __construct()
     {
-        ShParserLoader::getInstance();
+//        $shParserExampleFilter = ShParserExampleFilter::newInstance();
+//        $shParserExampleFilter->callMyFilter("Yurij");
+        $shParserExampleAction = ShParserExampleAction::newInstance();
+        $shParserExampleAction->callMyAction();
+//        ShParserLoader::getInstance();
     }
+
 
     public static function getInstance()
     {
