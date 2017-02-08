@@ -2,6 +2,8 @@
 
 namespace includes\example;
 
+use includes\common\ShParserLocalization;
+
 class ShParserExampleAction
 {
     public function __construct()
@@ -35,6 +37,11 @@ class ShParserExampleAction
         add_action('plugins_loaded', function () {
             error_log(__('Hello', SHPARSER_PLUGIN_TEXTDOMAIN));
         }, 100);
+    }
+
+    public function all(){
+        ShParserLocalization::getInstance();
+        $shParserExampleAction = ShParserExampleAction::newInstance();
     }
 
     public static function newInstance()
