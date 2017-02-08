@@ -70,15 +70,14 @@ class ShParserLoader
     public function all()
     {
         ShParserLocalization::getInstance();
-        $shParserExampleAction = ShParserExampleAction::newInstance();
-        $shParserExampleFilter = ShParserExampleFilter::newInstance();
-        $shParserExampleFilter->callMyFilter("Yurij");
-        $shParserExampleFilter->callMyFilterAdditionalParameter("Yurij", "Softgroup", "Poltava");
-        $shParserExampleAction = ShParserExampleAction::newInstance();
-        $shParserExampleAction->callMyAction();
-        $shParserExampleAction->callMyActionAdditionalParameter('test1', 'test2', 'test3');
+//        $shParserExampleAction = ShParserExampleAction::newInstance();
+//        $shParserExampleFilter = ShParserExampleFilter::newInstance();
+//        $shParserExampleFilter->callMyFilter("Yurij");
+//        $shParserExampleFilter->callMyFilterAdditionalParameter("Yurij", "Softgroup", "Poltava");
+//        $shParserExampleAction = ShParserExampleAction::newInstance();
+//        $shParserExampleAction->callMyAction();
+//        $shParserExampleAction->callMyActionAdditionalParameter('test1', 'test2', 'test3');
     }
-
 }
 
 
