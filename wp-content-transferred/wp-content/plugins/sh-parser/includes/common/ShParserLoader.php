@@ -3,7 +3,6 @@
 namespace includes\common;
 
 use includes\example\ShParserExampleAction;
-use includes\example\ShParserExampleFilter;
 
 class ShParserLoader
 {

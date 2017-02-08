@@ -2,36 +2,13 @@
 
 namespace includes\example;
 
-use includes\common\ShParserLocalization;
-
 class ShParserExampleAction
 {
     public function __construct()
     {
-        // Add function to action 'my action'
+
         add_action('my_action', array(&$this, 'myActionFunction'));
-        // Add function to action 'my_hook'
-//        add_action('my_hook', function () {
-//            error_log(1);
-//        });
-//        add_action('my_hook', function () {
-//            error_log(2);
-//        });
-//        add_action('my_hook', function () {
-//            error_log(3);
-//        });
-//        add_action('my_hook', function () {
-//            error_log(4);
-//        }, 15);
-//        add_action('my_hook', function () {
-//            error_log(5);
-//        }, 10);
-//        add_action('my_hook', function () {
-//            error_log(6);
-//        }, 5);
-//
-//        do_action('my_hook');
-//
+
         add_action('my_action', array(&$this, 'myActionFunctionAdditionalParameter'), 10, 3);
 
         add_action('plugins_loaded', function () {
