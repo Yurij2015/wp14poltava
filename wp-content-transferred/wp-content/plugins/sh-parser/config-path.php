@@ -17,7 +17,7 @@ $TPOPLUGINS = get_plugin_data(SHPARSER_PLUGIN_DIR.'/'.basename(SHPARSER_PLUGIN_D
 define("SHPARSER_PLUGIN_VERSION", $TPOPLUGINS['Version']);
 define("SHPARSER_PLUGIN_NAME", $TPOPLUGINS['Name']);
 
-define("SHPARSER_DIR_LOCALIZATION", plugin_basename(SHPARSER_PLUGIN_DIR.'languages/'));
+define("SHPARSER_DIR_LOCALIZATION", plugin_basename(SHPARSER_PLUGIN_DIR.'/languages/'));
 
 
 

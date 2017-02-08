@@ -1,12 +1,16 @@
 <?php
 
 namespace includes;
+
+use includes\common\ShParserLoader;
+
 class ShParserPlugin
 {
     private static $istance = null;
 
     private function __construct()
     {
+        ShParserLoader::getInstance();
     }
 
     public static function getInstance()
