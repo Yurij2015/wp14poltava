@@ -40,6 +40,7 @@ class ShParserLoader
     public function all()
     {
         ShParserLocalization::getInstance();
+        $shParserExampleAction = ShParserExampleAction::newInstance();
     }
 
 }

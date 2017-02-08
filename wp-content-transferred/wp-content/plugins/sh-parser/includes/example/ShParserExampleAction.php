@@ -33,10 +33,10 @@ class ShParserExampleAction
 //        do_action('my_hook');
 //
         add_action('my_action', array(&$this, 'myActionFunctionAdditionalParameter'), 10, 3);
-//
-//        add_action('plugins_loaded', function () {
-//            error_log(__('Hello', SHPARSER_PLUGIN_TEXTDOMAIN));
-//        }, 100);
+
+        add_action('plugins_loaded', function () {
+            error_log(__('Hello', SHPARSER_PLUGIN_TEXTDOMAIN));
+        }, 100);
     }
 
     public static function newInstance()

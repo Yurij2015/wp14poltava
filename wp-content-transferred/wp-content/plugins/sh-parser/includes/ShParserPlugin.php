@@ -14,11 +14,10 @@ class ShParserPlugin
     {
 //        $shParserExampleFilter = ShParserExampleFilter::newInstance();
 //        $shParserExampleFilter->callMyFilter("Yurij");
-        $shParserExampleAction = ShParserExampleAction::newInstance();
-        $shParserExampleAction->callMyAction();
-//        ShParserLoader::getInstance();
+//        $shParserExampleAction = ShParserExampleAction::newInstance();
+//        $shParserExampleAction->callMyAction();
+        ShParserLoader::getInstance();
     }
-
 
     public static function getInstance()
     {
