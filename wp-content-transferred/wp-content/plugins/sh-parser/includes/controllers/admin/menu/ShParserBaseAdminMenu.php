@@ -2,7 +2,7 @@
 namespace includes\controllers\admin\menu;
 
 
-abstract class StepByStepBaseAdminMenuController implements StepByStepIСreatorInstance
+abstract class ShParserBaseAdminMenu
 {
     public function __construct(){
         /*
@@ -14,4 +14,5 @@ abstract class StepByStepBaseAdminMenuController implements StepByStepIСreatorI
 
     abstract public function action();
     abstract public function render();
+    abstract public static function newInstance();
 }
