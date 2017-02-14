@@ -2,6 +2,7 @@
 
 namespace includes\common;
 
+use includes\controllers\admin\menu\ShParserMainAdminMenu;
 use includes\example\ShParserExampleAction;
 
 class ShParserLoader
@@ -28,7 +29,7 @@ class ShParserLoader
 
     public function admin()
     {
-
+        ShParserMainAdminMenu::newInstance();
     }
 
     public function site()
