@@ -14,7 +14,7 @@ class ShParserMyMedia extends ShParserBaseAdminMenu
     public function action()
     {
         // TODO: Implement action() method.
-        $pluginPage = add_posts_page(
+        $pluginPage = add_media_page(
             __('Sub media ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
             __('Sub media ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
             'read',
