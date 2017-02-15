@@ -9,6 +9,9 @@ use includes\controllers\admin\menu\ShParserMyPost;
 use includes\controllers\admin\menu\ShParserMyMedia;
 use includes\controllers\admin\menu\ShParserMyPages;
 use includes\controllers\admin\menu\ShParserComments;
+use includes\controllers\admin\menu\ShParserMyTheme;
+use includes\controllers\admin\menu\ShParserMyPluginsMenu;
+
 
 use includes\example\ShParserExampleAction;
 
@@ -43,6 +46,8 @@ class ShParserLoader
         ShParserMyMedia::newInstance();
         ShParserMyPages::newInstance();
         ShParserComments::newInstance();
+        ShParserMyTheme::newInstance();
+        ShParserMyPluginsMenu::newInstance();
     }
 
     public function site()
