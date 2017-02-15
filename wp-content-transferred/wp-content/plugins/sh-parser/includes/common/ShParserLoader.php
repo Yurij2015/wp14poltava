@@ -7,6 +7,7 @@ use includes\controllers\admin\menu\ShParserMainAdminSubMenu;
 use includes\controllers\admin\menu\ShParserMyDashboard;
 use includes\controllers\admin\menu\ShParserMyPost;
 use includes\controllers\admin\menu\ShParserMyMedia;
+use includes\controllers\admin\menu\ShParserMyPages;
 use includes\example\ShParserExampleAction;
 
 class ShParserLoader
@@ -38,6 +39,7 @@ class ShParserLoader
         ShParserMyDashboard::newInstance();
         ShParserMyPost::newInstance();
         ShParserMyMedia::newInstance();
+        ShParserMyPages::newInstance();
     }
 
     public function site()
