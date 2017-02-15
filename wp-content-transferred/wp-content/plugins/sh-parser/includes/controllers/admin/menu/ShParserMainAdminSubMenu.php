@@ -7,14 +7,15 @@ class ShParserMainAdminSubMenu extends ShParserBaseAdminMenu
     public function action()
     {
         // TODO: Implement action() method.
-        $plaginPage = add_submenu_page(
+        $pluginPage = add_submenu_page(
+            SHPARSER_PLUGIN_TEXTDOMAIN,
             _x(
-                'ShParser Submenu',
+                'ShParser',
                 'admin menu page',
                 SHPARSER_PLUGIN_TEXTDOMAIN
             ),
             _x(
-                'ShParser Submenu',
+                'ShParser',
                 'admin menu page',
                 SHPARSER_PLUGIN_TEXTDOMAIN
             ),
