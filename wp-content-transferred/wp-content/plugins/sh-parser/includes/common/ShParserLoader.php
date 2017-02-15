@@ -5,6 +5,8 @@ namespace includes\common;
 use includes\controllers\admin\menu\ShParserMainAdminMenu;
 use includes\controllers\admin\menu\ShParserMainAdminSubMenu;
 use includes\controllers\admin\menu\ShParserMyDashboard;
+use includes\controllers\admin\menu\ShParserMyPost;
+use includes\controllers\admin\menu\ShParserMyMedia;
 use includes\example\ShParserExampleAction;
 
 class ShParserLoader
@@ -34,6 +36,8 @@ class ShParserLoader
         ShParserMainAdminMenu::newInstance();
         ShParserMainAdminSubMenu::newInstance();
         ShParserMyDashboard::newInstance();
+        ShParserMyPost::newInstance();
+        ShParserMyMedia::newInstance();
     }
 
     public function site()
