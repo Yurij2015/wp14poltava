@@ -15,8 +15,8 @@ class ShParserMyDashboard extends ShParserBaseAdminMenu
     {
         // TODO: Implement action() method.
         $pluginPage = add_dashboard_page(
-            __('Sub dashboard ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
-            __('Sub dashboard ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
+            __('ShParser in dashboard ', SHPARSER_PLUGIN_TEXTDOMAIN),
+            __('ShParser in dashboard', SHPARSER_PLUGIN_TEXTDOMAIN),
             'read',
             'shparser_control_sub_dashboard_menu',
             array(&$this, 'render')
