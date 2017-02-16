@@ -14,7 +14,7 @@ use includes\controllers\admin\menu\ShParserMyPluginsMenu;
 use includes\controllers\admin\menu\ShParserUserMenu;
 use includes\controllers\admin\menu\ShParserMyToolsMenu;
 use includes\controllers\admin\menu\ShParserMyOptionsMenu;
-
+use includes\common\ShParserLoaderScript;
 
 use includes\example\ShParserExampleAction;
 
@@ -65,6 +65,7 @@ class ShParserLoader
     {
         ShParserLocalization::getInstance();
         $shParserExampleAction = ShParserExampleAction::newInstance();
+        ShParserLoaderScript::getinstance();
     }
 
 }
