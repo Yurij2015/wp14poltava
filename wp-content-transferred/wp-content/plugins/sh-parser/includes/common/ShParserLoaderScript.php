@@ -50,6 +50,8 @@ class ShParserLoaderScript
             array(), //$deps
             SHPARSER_PLUGIN_VERSION //$ver
         );
+        //wp_enqueue_style(SHPARSER_PLUGIN_SLUG . '-AdminMain');
+
 
     }
 
