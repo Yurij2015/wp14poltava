@@ -11,6 +11,9 @@ use includes\controllers\admin\menu\ShParserMyPages;
 use includes\controllers\admin\menu\ShParserComments;
 use includes\controllers\admin\menu\ShParserMyTheme;
 use includes\controllers\admin\menu\ShParserMyPluginsMenu;
+use includes\controllers\admin\menu\ShParserUserMenu;
+use includes\controllers\admin\menu\ShParserMyToolsMenu;
+use includes\controllers\admin\menu\ShParserMyOptionsMenu;
 
 
 use includes\example\ShParserExampleAction;
@@ -48,6 +51,9 @@ class ShParserLoader
         ShParserComments::newInstance();
         ShParserMyTheme::newInstance();
         ShParserMyPluginsMenu::newInstance();
+        ShParserUserMenu::newInstance();
+        ShParserMyToolsMenu::newInstance();
+        ShParserMyOptionsMenu::newInstance();
     }
 
     public function site()

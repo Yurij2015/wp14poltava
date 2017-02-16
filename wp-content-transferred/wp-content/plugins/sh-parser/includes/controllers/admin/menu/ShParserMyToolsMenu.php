@@ -2,31 +2,30 @@
 /**
  * Created by PhpStorm.
  * User: Yurij
- * Date: 15.02.2017
- * Time: 17:24
+ * Date: 16.02.2017
+ * Time: 10:28
  */
 
 namespace includes\controllers\admin\menu;
 
 
-class ShParserMyTheme extends ShParserBaseAdminMenu
+class ShParserMyToolsMenu extends ShParserBaseAdminMenu
 {
-
     public function action()
     {
         // TODO: Implement action() method.
-        $plaginPage = add_theme_page(
-            __('Sub theme by ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
-            __('Sub theme by ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
+        $plaginPage = add_management_page(
+            __('Sub tools by ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
+            __('Sub tools by ShParser', SHPARSER_PLUGIN_TEXTDOMAIN),
             'read',
-            'sh_parser_sub_theme_menu',
+            'sh_parser_sub_tools_menu',
             array(&$this, 'render')
         );
     }
 
     public function render()
     {
-        _e("Hello this page Theme", SHPARSER_PLUGIN_TEXTDOMAIN);
+        _e("Hello this page Tools", SHPARSER_PLUGIN_TEXTDOMAIN);
     }
 
     public static function newInstance()
@@ -35,5 +34,4 @@ class ShParserMyTheme extends ShParserBaseAdminMenu
         $instance = new self;
         return $instance;
     }
-
 }
