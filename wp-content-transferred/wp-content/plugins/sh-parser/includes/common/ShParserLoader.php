@@ -54,6 +54,7 @@ class ShParserLoader
         ShParserUserMenu::newInstance();
         ShParserMyToolsMenu::newInstance();
         ShParserMyOptionsMenu::newInstance();
+
     }
 
     public function site()
