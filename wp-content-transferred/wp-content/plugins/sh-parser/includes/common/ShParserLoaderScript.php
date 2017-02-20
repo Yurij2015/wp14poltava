@@ -41,7 +41,7 @@ class ShParserLoaderScript
             SHPARSER_PLUGIN_VERSION, //$ver
             true //$$in_footer
         );
-        wp_enqueue_script(SHPARSER_PLUGIN_SLUG . '-AdminMain');
+       // wp_enqueue_script(SHPARSER_PLUGIN_SLUG . '-AdminMain');
 
 
         wp_register_style(
