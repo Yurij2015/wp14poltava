@@ -2,6 +2,8 @@
 
 namespace includes\controllers\admin\menu;
 
+use includes\common\ShParserRequestApi;
+
 class ShParserMainAdminMenu extends ShParserBaseAdminMenu
 {
     public function action()
@@ -36,6 +38,10 @@ class ShParserMainAdminMenu extends ShParserBaseAdminMenu
     {
         // TODO: Implement render() method.
         _e("Hello world, this is ShParser", SHPARSER_PLUGIN_TEXTDOMAIN);
+        echo "<br>";
+        $requestAPI = ShParserRequestApi::getInstance();
+        var_dump($requestAPI->getUser());
+
     }
 
     public static function newInstance()
