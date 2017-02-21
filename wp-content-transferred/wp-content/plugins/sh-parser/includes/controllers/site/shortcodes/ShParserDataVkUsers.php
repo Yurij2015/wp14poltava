@@ -25,7 +25,7 @@ class ShParserDataVkUsers extends ShParserShortcodes implements ShParserICreator
     {
         // TODO: Implement action() method.
 
-       //$atts = shortcode_atts(array(), $atts, $tag);
+        //$atts = shortcode_atts(array(), $atts, $tag);
 
         $requestAPI = ShParserRequestApi::getInstance();
 
