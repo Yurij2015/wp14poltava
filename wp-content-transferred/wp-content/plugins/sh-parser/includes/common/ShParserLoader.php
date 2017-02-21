@@ -16,6 +16,7 @@ use includes\controllers\admin\menu\ShParserMyToolsMenu;
 use includes\controllers\admin\menu\ShParserMyOptionsMenu;
 use includes\common\ShParserLoaderScript;
 
+use includes\controllers\site\shortcodes\ShParserDataVkUsers;
 use includes\example\ShParserExampleAction;
 
 class ShParserLoader
@@ -59,6 +60,7 @@ class ShParserLoader
 
     public function site()
     {
+        ShParserDataVkUsers::newInstance();
 
     }
 
