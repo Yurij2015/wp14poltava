@@ -14,6 +14,8 @@ use includes\controllers\admin\menu\ShParserICreatorinstance;
 class ShParserDataVkUsers extends ShParserShortcodes implements ShParserICreatorinstance
 {
 
+
+
     public function initShortcode()
     {
         // TODO: Implement initShortcode() method.
