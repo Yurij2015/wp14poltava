@@ -10,11 +10,18 @@ namespace includes\controllers\site\shortcodes;
 
 use includes\common\ShParserRequestApi;
 use includes\controllers\admin\menu\ShParserICreatorinstance;
+use includes\models\site\ShParserDataVkUserModel;
 
 class ShParserDataVkUsers extends ShParserShortcodes implements ShParserICreatorinstance
 {
 
+    public $model;
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->model = ShParserDataVkUserModel::newInstance();
+    }
 
     public function initShortcode()
     {
