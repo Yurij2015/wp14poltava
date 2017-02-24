@@ -9,10 +9,10 @@
 namespace includes\controllers\site\shortcodes;
 
 use includes\common\ShParserRequestApi;
-use includes\controllers\admin\menu\ShParserICreatorinstance;
+use includes\controllers\admin\menu\ShParserICreatorInstance;
 use includes\models\site\ShParserDataVkUserModel;
 
-class ShParserDataVkUsers extends ShParserShortcodes implements ShParserICreatorinstance
+class ShParserDataVkUsers extends ShParserShortcodes implements ShParserICreatorInstance
 {
 
     public $model;

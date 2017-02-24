@@ -14,5 +14,5 @@ abstract class ShParserBaseAdminMenu
 
     abstract public function action();
     abstract public function render();
-    abstract public static function newInstance();
+   // abstract public static function newInstance();
 }

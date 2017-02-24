@@ -8,7 +8,7 @@
 
 namespace includes\controllers\admin\menu;
 
-interface ShParserICreatorinstance
+interface ShParserICreatorInstance
 {
     public static function newInstance();
 }

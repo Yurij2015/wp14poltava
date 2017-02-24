@@ -44,16 +44,15 @@ class ShParserMainAdminMenu extends ShParserBaseAdminMenu
         var_dump($requestAPI->getUser());
         echo "</pre>";
         $user = $requestAPI->getUser();
+        error_log('$requestAPI');
 
-        echo($user->response[0]->id);
+        echo ($user -> response[0] -> id);
         echo "<br>";
-        echo($user->response[0]->bdate);
+        echo ($user -> response[0] -> bdate);
         echo "<br>";
-        echo($user->response[0]->first_name);
+        echo ($user -> response[0] -> first_name);
         echo "<br>";
-        echo($user->response[0]->last_name);
-
-
+        echo ($user -> response[0] -> last_name);
     }
 
     public static function newInstance()
