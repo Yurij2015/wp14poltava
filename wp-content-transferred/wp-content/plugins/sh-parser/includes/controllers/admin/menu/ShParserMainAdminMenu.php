@@ -3,9 +3,17 @@
 namespace includes\controllers\admin\menu;
 
 use includes\common\ShParserRequestApi;
+use includes\models\admin\menu\ShParserMainAdminMenuModel;
 
 class ShParserMainAdminMenu extends ShParserBaseAdminMenu
 {
+    public $model;
+    public function __construct()
+    {
+        parent::__construct();
+        $this->model = ShParserMainAdminMenuModel::newInstance();
+    }
+
     public function action()
     {
         // TODO: Implement action() method.
@@ -46,13 +54,17 @@ class ShParserMainAdminMenu extends ShParserBaseAdminMenu
         $user = $requestAPI->getUser();
         error_log('$requestAPI');
 
-        echo ($user -> response[0] -> id);
+        echo($user->response[0]->id);
         echo "<br>";
-        echo ($user -> response[0] -> bdate);
+        echo($user->response[0]->bdate);
         echo "<br>";
-        echo ($user -> response[0] -> first_name);
+        echo($user->response[0]->first_name);
         echo "<br>";
-        echo ($user -> response[0] -> last_name);
+        echo($user->response[0]->last_name);
+
+        $pathView = SHPARSER_PLUGIN_DIR . "includes/views/admin/menu/ShParserMainAdminMenu.view.php";
+        $this->loadView($pathView);
+
     }
 
     public static function newInstance()
