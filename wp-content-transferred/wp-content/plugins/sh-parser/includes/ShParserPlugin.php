@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: romansolomashenko
+ * Date: 16.01.17
+ * Time: 6:53 PM
+ */
 namespace includes;
 
 use includes\common\ShParserDefaultOption;
@@ -8,19 +14,23 @@ use includes\common\ShParserLoader;
 
 class ShParserPlugin
 {
-    private static $istance = null;
+    private static $instance = null;
 
     private function __construct()
     {
         ShParserLoader::getInstance();
+        add_action('plugins_loaded', array(&$this, 'setDefaultOptions'));
     }
 
     public static function getInstance()
     {
-        if (null == self::$istance) {
-            self::$istance = new self;
+
+        if (null == self::$instance) {
+            self::$instance = new self;
         }
-        return self::$istance;
+
+        return self::$instance;
+
     }
 
     /**
@@ -29,7 +39,8 @@ class ShParserPlugin
     public function setDefaultOptions()
     {
         if (!get_option(SHPARSER_PLUGIN_OPTION_NAME)) {
-            update_option(SHPARSER_PLUGIN_OPTION_NAME, ShParserDefaultOption::getDefaultOptions());
+            update_option(SHPARSER_PLUGIN_OPTION_NAME, SHPARSER_PLUGIN_NAME //ShParserDefaultOption::getDefaultOptions()
+            );
         }
         if (!get_option(SHPARSER_PLUGIN_OPTION_VERSION)) {
             update_option(SHPARSER_PLUGIN_OPTION_VERSION, SHPARSER_PLUGIN_VERSION);
@@ -49,6 +60,7 @@ class ShParserPlugin
         delete_option(SHPARSER_PLUGIN_OPTION_NAME);
         delete_option(SHPARSER_PLUGIN_OPTION_VERSION);
     }
+
 }
 
 ShParserPlugin::getInstance();

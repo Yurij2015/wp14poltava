@@ -26,7 +26,9 @@ class ShParserLoaderScript
 
     public static function getinstance()
     {
-        self::$instance = new self;
+        if (null == self::$instance) {
+            self::$instance = new self;
+        }
         return self::$instance;
     }
 
@@ -41,8 +43,8 @@ class ShParserLoaderScript
             SHPARSER_PLUGIN_VERSION, //$ver
             true //$$in_footer
         );
-       // wp_enqueue_script(SHPARSER_PLUGIN_SLUG . '-AdminMain');
 
+       // wp_enqueue_script(SHPARSER_PLUGIN_SLUG . '-AdminMain');
 
         wp_register_style(
             SHPARSER_PLUGIN_SLUG . '-AdminMain',//$handle
@@ -50,16 +52,18 @@ class ShParserLoaderScript
             array(), //$deps
             SHPARSER_PLUGIN_VERSION //$ver
         );
-        //wp_enqueue_style(SHPARSER_PLUGIN_SLUG . '-AdminMain');
+        wp_enqueue_style(SHPARSER_PLUGIN_SLUG . '-AdminMain');
 
 
     }
 
     public function loadHeadScriptAdmin()
     {
+
+
     }
 
-    public function loadScriptSite()
+    public function loadScriptSite($hook)
     {
     }
 

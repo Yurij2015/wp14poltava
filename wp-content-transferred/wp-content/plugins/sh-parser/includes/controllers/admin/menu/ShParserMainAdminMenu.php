@@ -46,21 +46,21 @@ class ShParserMainAdminMenu extends ShParserBaseAdminMenu
     {
         // TODO: Implement render() method.
         _e("Hello world, this is ShParser", SHPARSER_PLUGIN_TEXTDOMAIN);
-        echo "<br>";
-        $requestAPI = ShParserRequestApi::getInstance();
-        echo "<pre>";
-        var_dump($requestAPI->getUser());
-        echo "</pre>";
-        $user = $requestAPI->getUser();
-        error_log('$requestAPI');
-
-        echo($user->response[0]->id);
-        echo "<br>";
-        echo($user->response[0]->bdate);
-        echo "<br>";
-        echo($user->response[0]->first_name);
-        echo "<br>";
-        echo($user->response[0]->last_name);
+//        echo "<br>";
+//        $requestAPI = ShParserRequestApi::getInstance();
+//        echo "<pre>";
+//        var_dump($requestAPI->getUser());
+//        echo "</pre>";
+//        $user = $requestAPI->getUser();
+//        error_log('$requestAPI');
+//
+//        echo($user->response[0]->id);
+//        echo "<br>";
+//        echo($user->response[0]->bdate);
+//        echo "<br>";
+//        echo($user->response[0]->first_name);
+//        echo "<br>";
+//        echo($user->response[0]->last_name);
 
         $pathView = SHPARSER_PLUGIN_DIR . "includes/views/admin/menu/ShParserMainAdminMenu.view.php";
         $this->loadView($pathView);

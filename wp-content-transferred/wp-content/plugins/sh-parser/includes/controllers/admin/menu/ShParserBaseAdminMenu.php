@@ -2,7 +2,7 @@
 namespace includes\controllers\admin\menu;
 
 
-abstract class ShParserBaseAdminMenu
+abstract class ShParserBaseAdminMenu implements ShParserICreatorInstance
 {
     public function __construct()
     {
@@ -14,7 +14,6 @@ abstract class ShParserBaseAdminMenu
     }
 
     abstract public function action();
-
     abstract public function render();
     // abstract public static function newInstance();
 
@@ -33,7 +32,7 @@ abstract class ShParserBaseAdminMenu
                     require_once $view;
                     break;
                 case 1:
-                    require $$view;
+                    require $view;
                     break;
                 default:
                     require_once $view;

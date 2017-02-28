@@ -1,7 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Yurij
- * Date: 25.02.2017
- * Time: 6:43
- */
+<form action="options.php" method="POST">
+    <?php
+settings_fields('ShParserMainSettings');
+do_settings_sections('sh-parser-development-plugin');
+submit_button();
+    ?>
+</form>
