@@ -3,6 +3,8 @@
 namespace includes\common;
 
 use includes\controllers\admin\menu\ShParserMainAdminMenu;
+use includes\controllers\admin\menu\ShParserGuestBook;
+
 use includes\controllers\admin\menu\ShParserMainAdminSubMenu;
 use includes\controllers\admin\menu\ShParserMyDashboard;
 use includes\controllers\admin\menu\ShParserMyPost;
@@ -44,6 +46,7 @@ class ShParserLoader
     public function admin()
     {
         ShParserMainAdminMenu::newInstance();
+        ShParserGuestBook::newInstance();
         ShParserMainAdminSubMenu::newInstance();
         ShParserMyDashboard::newInstance();
         ShParserMyPost::newInstance();
