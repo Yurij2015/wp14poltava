@@ -19,9 +19,8 @@ class ShParserDefaultOption
                 'token' => ''
             )
         );
-        $defaults = apply_filters('sh_parser_default_option', $defaults);
+        // Фильтр которому можно подключиться и изменить массив дефолтных настроек
+        $defaults = apply_filters('step_by_step_default_option', $defaults );
         return $defaults;
-
     }
-
 }

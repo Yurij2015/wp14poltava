@@ -39,7 +39,7 @@ class ShParserPlugin
     public function setDefaultOptions()
     {
         if (!get_option(SHPARSER_PLUGIN_OPTION_NAME)) {
-            update_option(SHPARSER_PLUGIN_OPTION_NAME, SHPARSER_PLUGIN_NAME //ShParserDefaultOption::getDefaultOptions()
+            update_option(SHPARSER_PLUGIN_OPTION_NAME, ShParserDefaultOption::getDefaultOptions()
             );
         }
         if (!get_option(SHPARSER_PLUGIN_OPTION_VERSION)) {
