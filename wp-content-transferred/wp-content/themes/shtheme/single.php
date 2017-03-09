@@ -33,9 +33,13 @@
             <p class="lead">
                 by <a href="index.php"><?php the_author() ?></a>
             </p>
+
             <p><i class="fa fa-clock-o"></i> Posted on <?php the_date() ?></p>
+            <p><i class="fa fa-bookmark-o"></i> Posted in <?php the_category(', '); ?></p>
+
             <hr>
             <?php the_content() ?>
+
             <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
             <hr>
             <?php

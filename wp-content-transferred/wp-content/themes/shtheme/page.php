@@ -11,7 +11,7 @@
             while (have_posts()) :
             the_post();
             ?>
-            <h1 class="page-header"><?php the_title() ?>
+            <h1 class="page-header"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 <small>by <a href="<?php the_author_link() ?>"><?php the_author() ?></a></small>
             </h1>
             <ol class="breadcrumb">
@@ -28,16 +28,17 @@
             <!-- Category template -->
             <h3>Шаблон страницы</h3>
             <h2>
-                <a href="#"><?php the_title() ?></a>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
             <p class="lead">
-                by <a href="index.php"><?php the_author() ?></a>
+                by <a href="<?php the_author_link() ?>"><?php the_author() ?></a>
             </p>
-            <p><i class="fa fa-clock-o"></i> Posted on <?php the_date() ?></p>
+            <p><i class="fa fa-clock-o"></i> Posted on <?php the_time('F jS, Y'); ?></p>
             <hr>
             <?php the_content() ?>
             <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
             <hr>
+
             <?php
             // код внутри цикла (теги шаблонов, html и пр.)
             endwhile;
