@@ -4,12 +4,7 @@
     <!-- Blog Search Well -->
     <div class="well">
         <h4>Blog Search</h4>
-        <div class="input-group">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                        </span>
-        </div>
+        <?php get_search_form() ?>
         <!-- /.input-group -->
     </div>
 
@@ -50,7 +45,8 @@
     <!-- Side Widget Well -->
     <div class="well">
         <h4>Side Widget Well</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus
+            laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
     </div>
 
 </div>

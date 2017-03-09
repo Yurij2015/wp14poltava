@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php bloginfo('name'); ?></title>
+    <title><?php bloginfo('name'); ?><?php wp_title('|',true,''); ?></title>
 </head>
 <body>
 
@@ -25,16 +25,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="about.html">О сайте</a>
+                    <a href="#">О сайте</a>
                 </li>
                 <li>
-                    <a href="photogallery.html">Фотогалерея</a>
+                    <a href="#">Фотогалерея</a>
                 </li>
                 <li>
-                    <a href="blog.html">Блог</a>
+                    <a href="#">Блог</a>
                 </li>
                 <li>
-                    <a href="sidebar.html">Рубрики</a>
+                    <a href="#">Рубрики</a>
                 </li>
             </ul>
         </div>
