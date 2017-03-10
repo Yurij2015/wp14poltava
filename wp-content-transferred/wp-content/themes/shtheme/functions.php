@@ -88,9 +88,17 @@ add_action('wp_enqueue_scripts', 'loadScriptSite');
 
 function registerNavMenu()
 {
-    register_nav_menu('footermenu', 'In footer menu');
+    register_nav_menu('footermenu', __('In footer menu', SH_THEME_TEXTDOMAIN));
 }
-add_action('after_setup_theme', 'registerNavMenu');
 
+add_action('after_setup_theme', 'registerNavMenu', 100);
 
+define("SH_THEME_TEXTDOMAIN", "shtheme");
+
+function themeLocalization()
+{
+    load_theme_textdomain(SH_THEME_TEXTDOMAIN, get_template_directory() . '/languages/');
+}
+
+add_action('after_setup_theme', 'themeLocalization');
 
