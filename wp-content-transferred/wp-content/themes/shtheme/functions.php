@@ -36,13 +36,12 @@ function loadScriptSite()
     wp_enqueue_style('font-awesome');
 
 
-   wp_deregister_script('jquery');
-    
+    wp_deregister_script('jquery');
+
     wp_register_script(
         'jquery',
         get_template_directory_uri() . '/assets/js/jquery.js',
-        array(
-           // 'jquery'
+        array(// 'jquery'
         ),
         $version,
         true
@@ -87,7 +86,11 @@ function loadScriptSite()
 
 add_action('wp_enqueue_scripts', 'loadScriptSite');
 
-
+function registerNavMenu()
+{
+    register_nav_menu('footermenu', 'In footer menu');
+}
+add_action('after_setup_theme', 'registerNavMenu');
 
 
 

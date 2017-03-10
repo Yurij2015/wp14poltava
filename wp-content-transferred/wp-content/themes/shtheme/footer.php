@@ -1,6 +1,7 @@
 <?php wp_footer(); ?>
 <!-- Footer -->
 <footer>
+        <?php wp_nav_menu('container=div&container_class=navbar-header') ?>
     <div class="row">
         <div class="col-lg-12">
             <p>Все права защищены &copy; <?php bloginfo('name'); ?></p>
